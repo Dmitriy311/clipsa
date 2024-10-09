@@ -19,6 +19,7 @@ https://docs.docker.com/compose/install/
 Предлагаемый порядок сборки/проверки:
 
 1. git clone https://github.com/Dmitriy311/clipsa.git
-2. docker compose up -d
-3. localhost:8081/bitrix/admin
-4. Сам компонент отображен на главной странице сайта.
+2. cd clipsa
+3. docker compose up -d (!в случае сборки на Windows, следует поменять CRLF->LF файла entrypoint.sh!)
+4. localhost:8081/bitrix/admin
+5. Сам компонент отображен на главной странице сайта. Поддерживается ввод даты формата "DD.MM.YYYY". Тесты на вводимые символы не реализованы.
