@@ -1,0 +1,4 @@
+FROM mysql
+
+#COPY bitrix_start_clean.sql docker-entrypoint-initdb.d/bitrix_start_clean.sql
+COPY bitrix_clipsa.sql docker-entrypoint-initdb.d/bitrix_clipsa.sql

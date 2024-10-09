@@ -1,0 +1,36 @@
+FROM alpine
+
+#RUN set -x ; \
+#  addgroup -g 82 -S www-data ; \
+#  adduser -u 82 -D -S -G www-data www-data && exit 0 ; exit 1
+
+RUN apk add  \
+    php  \
+    php-fpm  \
+    nginx  \
+    php-session \
+    php-gd \
+    php-pdo_mysql \
+    php83-mysqlnd \
+    php83-mysqli \
+    php-openssl \
+    freetype \
+    composer \
+    supervisor \
+    php-xml \
+    php-simplexml \
+    opensmtpd \
+    php-pecl-redis \
+    php-pecl-memcached
+
+COPY bitrix /bitrix/
+
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY php.ini /etc/php83/php.ini
+COPY php-fpm.conf /etc/php83/php-fpm.conf
+
+COPY entrypoint.sh entrypoint.sh
+RUN chmod 777 entrypoint.sh
+
+CMD ["./entrypoint.sh"]
+EXPOSE 8081
