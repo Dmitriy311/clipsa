@@ -13,7 +13,7 @@
 
 ------
 
-Настроено довольно быстрое (~3 минут) на docker compose.
+Настроено развертывание на docker compose.
 https://docs.docker.com/compose/install/
 
 Предлагаемый порядок сборки/проверки:
