@@ -18,7 +18,7 @@ https://docs.docker.com/compose/install/
 
 Предлагаемый порядок сборки/проверки:
 
-1. git clone git@github.com:Dmitriy311/clipsa.git
+1. git clone https://github.com/Dmitriy311/clipsa.git
 2. docker compose up -d
 3. localhost:8081/bitrix/admin
 4. Сам компонент отображен на главной странице сайта.
